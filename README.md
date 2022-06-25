@@ -1,3 +1,3 @@
-# wslyxblog
-A blog website base on hexo  
-My blog website: http://extreme-raptor.asia
+欢迎访问我都网站
+
+你好啊朋友

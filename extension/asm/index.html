@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple template</title>
+    <script>
+        fetch('program.wasm')
+    .then(res =>
+      res.arrayBuffer()
+    ).then(bytes =>
+      WebAssembly.instantiate(bytes, importObject)
+    ).then(results => {
+      results.instance.exports.exported_func();
+    });
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="generator" content="Hugo 0.48" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Stm32 C语言常用语法</title>
+    <link rel="stylesheet" type="text/css" href="/css/cont.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/menu.css">
+    <link rel="icon" href="/imag/ear.jpg" type="image/x-icon" />
+</head>
+
+<body>
+    <div id="background"></div>
+
+
+    <script src="/js/segment.min.js"></script>
+    <script src="/js/ease.min.js"></script>
+    <div id="menu">
+
+        <div id="menu-icon-wrapper" class="menu-icon-wrapper">
+
+            <svg viewBox="0,0,100,100">
+            <path id="pathA" d="M 30 40 L 70 40 C 90 40 90 75 60 85 A 40 40 0 0 1 20 20 L 80 80" />
+            <path id="pathB" d="M 30 50 L 70 50" />
+            <path id="pathC" d="M 70 60 L 30 60 C 10 60 10 20 40 15 A 40 38 0 1 1 20 80 L 80 20" />
+        </svg>
+
+            <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+        </div>
+
+        <h1 id="D0001"><img src="/imag/ear.jpg" style="width: 30px;height: 30px;" />E&R</h1>
+
+        <ul id="menu-list" class="menu-close">
+            <li><a href="/">HOME</a></li>
+
+            <li>
+                <a href="/posts/"> POSTS</a>
+
+            </li>
+
+            <li>
+                <a href="/about/"> ABOUT</a>
+
+            </li>
+
+        </ul>
+    </div>
+    <script type="text/javascript">
+        var pathA = document.getElementById('pathA'),
+            pathB = document.getElementById('pathB'),
+            pathC = document.getElementById('pathC');
+        segmentA = new Segment(pathA, 8, 32);
+        segmentB = new Segment(pathB, 8, 32);
+        segmentC = new Segment(pathC, 8, 32);
+
+        function inAC(s) {
+            s.draw('80% - 24', '80%', 0.3, {
+                delay: 0.1,
+                callback: function() {
+                    inAC2(s)
+                }
+            });
+        }
+
+        function inAC2(s) {
+            s.draw('100% - 54.5', '100% - 30.5', 0.6, {
+                easing: ease.ease('elastic-out', 1, 0.3)
+            });
+        }
+
+        function inB(s) {
+            s.draw(8 - 6, 32 + 6, 0.1, {
+                callback: function() {
+                    inB2(s)
+                }
+            });
+        }
+
+        function inB2(s) {
+            s.draw(8 + 12, 32 - 12, 0.3, {
+                easing: ease.ease('bounce-out', 1, 0.3)
+            });
+        }
+
+        function outAC(s) {
+            s.draw('90% - 24', '90%', 0.1, {
+                easing: ease.ease('elastic-in', 1, 0.3),
+                callback: function() {
+                    outAC2(s)
+                }
+            });
+        }
+
+        function outAC2(s) {
+            s.draw('20% - 24', '20%', 0.3, {
+                callback: function() {
+                    outAC3(s)
+                }
+            });
+        }
+
+        function outAC3(s) {
+            s.draw(8, 32, 0.7, {
+                easing: ease.ease('elastic-out', 1, 0.3)
+            });
+        }
+
+        function outB(s) {
+            s.draw(8, 32, 0.7, {
+                delay: 0.1,
+                easing: ease.ease('elastic-out', 2, 0.4)
+            });
+        }
+
+        var trigger = document.getElementById('menu-icon-trigger'),
+            toCloseIcon = true;
+
+        var list = document.getElementById('menu-list')
+
+        trigger.onclick = function() {
+            if (toCloseIcon) {
+                inAC(segmentA);
+                inB(segmentB);
+                inAC(segmentC);
+
+                list.className = "menu-open";
+            } else {
+                outAC(segmentA);
+                outB(segmentB);
+                outAC(segmentC);
+
+                list.className = "menu-close";
+            }
+            toCloseIcon = !toCloseIcon;
+        };
+    </script>
+
+
+
+    <div id="container">
+
+        <div class="paper">
+            <h1 class="title">按位逻辑运算</h1>
+            <p>
+                <img src="/imag/cLanguage_1.png" style="width:100%">
+            </p>
+        </div>
+        
+
+        <p id="bzoj"><a href="http://jdao.online" target="_blank">
+        技术支持
+    </a></p>
+        <p id="bzoj"><a href="http://www.beian.miit.gov.cn/" target="_blank">
+        豫ICP备20024227
+    </a></p>
+    </div>
+
+
+</body>

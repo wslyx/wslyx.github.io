@@ -1,0 +1,119 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0px 0px;
+    padding-top: 0%;
+    height: 100%;
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom right, rgb(0, 217, 255), rgb(31, 255, 143));
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+#container {
+    /* float: right; */
+    position: absolute;
+    right: 0px;
+    left: 240px;
+    width: auto;
+}
+
+.paper {
+    /*background-color: rgb(105 185 174);*/
+    /* margin: 3em 10%; */
+    margin: 30px 30px;
+    padding: 10px 5%;
+    /*box-shadow: 0px 0px 20px #ffb203c2;*/
+    /*font-family: 方正雅士;*/
+    overflow-x: auto;
+    border-radius: 10px;
+    /*border-style: ridge;*/
+    font-size: smaller;
+    background-color: snow;
+}
+
+@media screen and (max-width: 600px) {
+    #container {
+        width: 100%;
+        right: 0;
+        left: 0px;
+    }
+    .paper {
+        margin: 1em 0px;
+        box-shadow: none;
+        /*box-shadow: 0px 0px 20px #ffb203c2;*/
+        background-color: snow;
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+}
+
+.title {
+    /*ext-align: center; */
+    border-left: 5px solid lightgray;
+    padding-left: 10px;
+    border-left-color: lightgray;
+    /*background-color: cyan;*/
+    /*border-radius: 6px;*/
+    /* transition: border-left-color 0.3s; */
+    transition: background-color 0.3s;
+}
+
+.title:hover {
+    border-left-color: gray;
+    background-color: rgb(241, 241, 241);
+}
+
+.title a {
+    text-decoration: none;
+    display: block;
+}
+
+.date {
+    color: gray;
+    text-align: right;
+    margin-top: 0px;
+    font-size: 1em;
+    font-weight: 100;
+}
+
+#editor-container {
+    width: 100%;
+    height: 30em;
+    border-left: 5px solid lightgray;
+    font-family: 'Fira Code';
+    border: 1px solid lightgray;
+}
+
+.list a {
+    font-size: 1.3em;
+}
+
+.list a:hover {
+    text-decoration: underline;
+}
+
+a {
+    color: black;
+}
+
+#bzoj {
+    color: gray;
+    text-align: center;
+    margin-top: 0px;
+    font-size: 1em;
+    font-weight: 100;
+}
+
+#bzoj a {
+    color: gray;
+    text-decoration: none;
+}

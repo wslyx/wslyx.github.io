@@ -1,0 +1,37 @@
+.highlight {
+    box-shadow: 0px 0px 0px white;
+    padding: 5px 1em;
+    transition: box-shadow 0.3s;
+    overflow-x: auto;
+}
+
+.highlight:hover {
+    /* box-shadow: 5px 5px 20px darkgrey; */
+    box-shadow: 1px 1px 3px darkgrey;
+    padding: 5px 1em;
+}
+
+table {
+    box-shadow: 0px 0px 0px white;
+    padding: 5px 1em;
+    transition: box-shadow 0.3s;
+    margin: 0 auto;
+}
+
+table:hover {
+    /* box-shadow: 5px 5px 20px darkgrey; */
+    box-shadow: 1px 1px 3px darkgrey;
+    padding: 5px 1em;
+}
+
+table td {
+    box-shadow: 0px 0px 0px white;
+    padding: 5px 1em;
+    transition: box-shadow 0.3s;
+}
+
+table td:hover {
+    /* box-shadow: 5px 5px 20px darkgrey; */
+    box-shadow: 1px 1px 3px darkgrey;
+    padding: 5px 1em;
+}
